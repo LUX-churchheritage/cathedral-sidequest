@@ -518,7 +518,7 @@
   </div>
   <div class="header-right">
     <a href="https://churchheritage.eu" class="header-link" target="_blank">churchheritage.eu</a>
-    <button class="btn-signin">Sign in</button>
+
   </div>
 </header>
 
@@ -529,11 +529,11 @@
 
 <div class="stats-bar">
   <div class="stat">
-    <div class="stat-number">18</div>
+    <div class="stat-number">28</div>
     <div class="stat-label">Quests</div>
   </div>
   <div class="stat">
-    <div class="stat-number">3</div>
+    <div class="stat-number">4</div>
     <div class="stat-label">Cities</div>
   </div>
   <div class="stat">
@@ -565,6 +565,7 @@
 
 <div class="city-tabs">
   <button class="city-tab active" data-city="all">All cities</button>
+  <button class="city-tab" data-city="utrecht">Utrecht</button>
   <button class="city-tab" data-city="amiens">Amiens</button>
   <button class="city-tab" data-city="rouen">Rouen</button>
   <button class="city-tab" data-city="beauvais">Beauvais</button>
@@ -578,265 +579,15 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
-const quests = [
-  // AMIENS
-  {
-    id: 1,
-    city: "amiens",
-    category: "find",
-    difficulty: "common",
-    icon: "🔍",
-    title: "The Weeping Angel",
-    location: "Cathédrale Notre-Dame, Amiens",
-    desc: "Find the Ange Pleureur behind the choir. It sits above the effigy of Canon Guilain Lucas, carved by Nicolas Blasset around 1628. One leg tucked under, head on hand, the other hand resting on a skull. During WWI soldiers sent postcards of this angel home. It became a symbol for an entire generation.",
-    context: "The angel is small and easy to miss. Most visitors never leave the nave. Walk past the choir, into the ambulatory, and look for the funeral monuments. The Weeping Angel is to the right of the axial chapel entrance.",
-    proof: "Photo of the angel from the ambulatory.",
-    practical: "Free entry. Open daily. No photography restrictions.",
-    tags: ["art", "history", "hidden"]
-  },
-  {
-    id: 2,
-    city: "amiens",
-    category: "find",
-    difficulty: "common",
-    icon: "🔍",
-    title: "Walk the octagonal labyrinth",
-    location: "Cathédrale Notre-Dame, Amiens",
-    desc: "Find the labyrinth inlaid in the nave floor. Unlike the round labyrinth in Chartres, this one is octagonal. Black and white marble, 12.1 metres wide, laid in 1288. The centre stone originally bore the names of the cathedral's architects: Robert de Luzarches, Thomas de Cormont, and his son Renaud.",
-    context: "The labyrinth is in the fourth and fifth bay of the nave. It is always visible, but chairs often cover parts of it. Walking it takes about 15 minutes if you follow the path without cutting corners.",
-    proof: "Photo of yourself at the centre of the labyrinth.",
-    practical: "Free. Always accessible during opening hours.",
-    tags: ["architecture", "hidden"]
-  },
-  {
-    id: 3,
-    city: "amiens",
-    category: "photograph",
-    difficulty: "uncommon",
-    icon: "📷",
-    title: "The Picardy Calendar",
-    location: "Cathédrale Notre-Dame, Amiens (west facade)",
-    desc: "Photograph the zodiac medallions at the base of the Saint Firmin portal on the west facade. Quatrefoil-shaped reliefs, eight centuries old, showing the agricultural calendar of medieval Picardy: pruning vines, harvesting wheat, slaughtering pigs. Each month paired with its zodiac sign.",
-    context: "The medallions are at knee height. Most people look up at the portals and miss what is at their feet. You need decent light and a close-up to capture the detail. Morning light works best on the west facade.",
-    proof: "Close-up photo of at least three consecutive months.",
-    practical: "Free. Exterior, always accessible. Best in morning light.",
-    tags: ["art", "architecture", "hidden"]
-  },
-  {
-    id: 4,
-    city: "amiens",
-    category: "photograph",
-    difficulty: "common",
-    icon: "📷",
-    title: "Two Virgins, one face",
-    location: "Cathédrale Notre-Dame, Amiens",
-    desc: "The Vierge Dorée on the south transept portal is one of the most copied Madonnas in Europe. But the one outside is a casting from 1980. The original was moved inside to protect it from erosion. Photograph both and compare. Same face, 700 years apart in weathering.",
-    context: "The exterior copy is on the Saint-Honoré portal (south transept). The original is inside the cathedral. Finding the interior original requires asking at the information desk or looking carefully near the south transept.",
-    proof: "Side-by-side photos of both statues.",
-    practical: "Free. The exterior is always visible. The interior requires cathedral opening hours.",
-    tags: ["art", "architecture"]
-  },
-  {
-    id: 5,
-    city: "amiens",
-    category: "attend",
-    difficulty: "uncommon",
-    icon: "🎭",
-    title: "Chroma: the cathedral in colour",
-    location: "Cathédrale Notre-Dame, Amiens (west facade)",
-    desc: "The west facade of Amiens was originally painted in bright colours. In the 1990s, laser cleaning revealed traces of the medieval polychrome. Every summer and winter evening, the Chroma light show projects those original colours back onto the stone. 50 minutes. Free.",
-    context: "The show runs mid-June to mid-September and late November to December. Summer shows start around 22:00-22:30, winter shows at 19:00. Arrive 15 minutes early for a spot directly in front of the facade. It works in light rain.",
-    proof: "Photo or video of the illuminated facade.",
-    practical: "Free. No reservation needed. Check amiens-tourisme.com for exact dates and times.",
-    tags: ["art", "history"]
-  },
-  {
-    id: 6,
-    city: "amiens",
-    category: "climb",
-    difficulty: "rare",
-    icon: "⬆️",
-    title: "302 steps above the nave",
-    location: "Cathédrale Notre-Dame, Amiens",
-    desc: "Climb the south tower. 302 steps in a spiral staircase, groups of maximum 18. At the top you see the roof structure, the flying buttresses from above, and the Somme valley to the horizon. The tower tour includes a gallery 30 metres above the nave floor, where you look down into the largest Gothic interior in France.",
-    context: "€7, closed on Tuesdays. Tours are guided on weekdays (15:00 and 16:30, April-September), self-guided on weekends. Book via e-ticket or arrive 15 minutes early. Limited to 18 people, so summer weekends sell out.",
-    proof: "Photo from the tower gallery looking down into the nave.",
-    practical: "€7. Closed Tuesdays. Arrive early. Not accessible for those with mobility issues.",
-    tags: ["architecture", "panorama"]
-  },
+let quests = [];
 
-  // ROUEN
-  {
-    id: 7,
-    city: "rouen",
-    category: "find",
-    difficulty: "common",
-    icon: "🔍",
-    title: "The heart of the Lionheart",
-    location: "Cathédrale Notre-Dame, Rouen",
-    desc: "Richard I of England died in 1199 after a crossbow bolt wound went septic. His body went to Fontevraud, his entrails to Poitiers, and his heart to Rouen. Find the sarcophagus in the right-hand aisle, past the altar. The Latin inscription reads: 'Hic cor conditum est Ricardi Anglorum Regis qui cor leonis dictus.'",
-    context: "The tomb is in the choir area, which may be behind a gate during renovations. If accessible, look for the effigy of Richard carved on the sarcophagus lid. The heart itself was analysed in 2013 and found to have been embalmed with mercury, frankincense, and daisy.",
-    proof: "Photo of the tomb and inscription.",
-    practical: "Free entry. Check for renovation closures. Tue-Sat 09:00-19:00, Mon from 14:00.",
-    tags: ["history", "hidden"]
-  },
-  {
-    id: 8,
-    city: "rouen",
-    category: "photograph",
-    difficulty: "common",
-    icon: "📷",
-    title: "Two towers, 300 years apart",
-    location: "Cathédrale Notre-Dame, Rouen",
-    desc: "The west facade of Rouen is asymmetric. The Tour Saint-Romain (left, 1145) is plain, Romanesque in its lower sections, 65 metres. The Tour de Beurre (right, 1488-1507) is Flamboyant Gothic, 77 metres. The name comes from papal dispensations allowing butter during Lent, sold to fund construction. Photograph both towers in one frame to capture 300 years of architectural change.",
-    context: "Stand on the Rue du Gros-Horloge facing the cathedral for the classic view. The asymmetry is the point. This is not a design failure. It is 700 years of building, each generation adding in its own style.",
-    proof: "Single photo showing both towers and the asymmetry.",
-    practical: "Exterior. Always accessible.",
-    tags: ["architecture"]
-  },
-  {
-    id: 9,
-    city: "rouen",
-    category: "find",
-    difficulty: "uncommon",
-    icon: "🔍",
-    title: "Monsters in the Booksellers' Portal",
-    location: "Cathédrale Notre-Dame, Rouen (north transept)",
-    desc: "The Portail des Libraires is named after the scribes whose shops once stood in the adjacent courtyard. Built from 1278. The portal contains over 150 medallions carved with grotesques: mermaids, harpies, tritons, monsters, hybrid creatures. Find the quatrefoil medallions along the jambs. They are small. Most visitors walk straight through without noticing them.",
-    context: "The portal is on the north side of the transept. The medallions are in groups of five, carved into the stone jambs at various heights. Some are at eye level, some lower. Bring a phone with zoom or binoculars for the higher ones.",
-    proof: "Close-up photos of three different grotesque creatures.",
-    practical: "Exterior, always accessible. Best in overcast light (no harsh shadows).",
-    tags: ["art", "architecture", "hidden"]
-  },
-  {
-    id: 10,
-    city: "rouen",
-    category: "attend",
-    difficulty: "rare",
-    icon: "🎭",
-    title: "Down into the 11th-century crypt",
-    location: "Cathédrale Notre-Dame, Rouen",
-    desc: "The crypt dates to the original Romanesque cathedral, before the Gothic one was built on top of it. It sits beneath the choir and was excavated between 1931 and 1934. Tours are guided, in French only, and run on Saturdays and Sundays at 14:30. No booking needed, but groups are capped at 18.",
-    context: "Access is through the Chapel of Saint Joan of Arc on the south side of the choir. The crypt gives you a sense of the scale of the Romanesque building that was demolished to make way for the current cathedral. It has been open to visitors since 1956.",
-    proof: "Photo from inside the crypt.",
-    practical: "Sat-Sun 14:30 only. French guided tour. €3 for groups. Free for individuals (verify).",
-    tags: ["architecture", "history", "hidden"]
-  },
-  {
-    id: 11,
-    city: "rouen",
-    category: "find",
-    difficulty: "uncommon",
-    icon: "🔍",
-    title: "Death dances at the Aître",
-    location: "Aître Saint-Maclou, Rouen",
-    desc: "Not a church, but a medieval ossuary 200 metres from the cathedral. Built after the Black Death of 1348 killed roughly 75% of the parish. The half-timbered galleries around the courtyard are carved with skulls, femurs, coffins, gravediggers' tools, and a Danse Macabre. Find the carvings on the wooden columns. They are not decorative. They are a record.",
-    context: "The Aître is on Rue Martainville, behind the Church of Saint-Maclou. The carvings are on the column bases and beams of the galleries. The courtyard has been restored and now houses cultural spaces, but the bones were removed in 1779. The carvings remain.",
-    proof: "Photos of three different macabre carvings on the gallery columns.",
-    practical: "Free entry to courtyard. Closed Mondays. Check visiterouen.com for hours.",
-    tags: ["history", "hidden", "sacred"]
-  },
-  {
-    id: 12,
-    city: "rouen",
-    category: "listen",
-    difficulty: "rare",
-    icon: "🎵",
-    title: "Widor's Michelangelo",
-    location: "Abbatiale Saint-Ouen, Rouen",
-    desc: "Saint-Ouen is not the cathedral, but some argue it is the finer building. It holds an unaltered Cavaillé-Coll organ that composer Charles-Marie Widor called 'a Michelangelo of an organ.' The church itself is 137 metres long with 33-metre vaults and what may be the finest collection of 14th-century stained glass in France.",
-    context: "Saint-Ouen is 400 metres from the cathedral. The organ is not always playing, but if you visit during a service or a concert, you hear what Widor heard. Check the schedule at the tourist office. Even without the organ, the interior is worth the walk: light, height, and an unusual lantern tower over the crossing.",
-    proof: "Photo of the Cavaillé-Coll organ case, or a recording if the organ is playing.",
-    practical: "Free entry. Check hours at visiterouen.com. Often overlooked by visitors who stop at the cathedral.",
-    tags: ["music", "architecture"]
-  },
-
-  // BEAUVAIS
-  {
-    id: 13,
-    city: "beauvais",
-    category: "photograph",
-    difficulty: "common",
-    icon: "📷",
-    title: "The highest Gothic vault ever built",
-    location: "Cathédrale Saint-Pierre, Beauvais",
-    desc: "Stand in the choir and look up. 48.5 metres. Amiens is 42.3. Chartres is 37. Beauvais beat them all and paid for it. The vault collapsed in 1284, twelve years after completion. It was rebuilt at the same height. They did not learn. Or they refused to compromise.",
-    context: "The choir is the first thing you enter (there is no nave). The height is disorienting because the proportions are extreme: very tall, very narrow. The effect is vertigo, not grandeur. Photograph from the centre of the choir looking straight up to capture the vault ribs converging.",
-    proof: "Photo looking straight up at the vault from the choir floor.",
-    practical: "Free entry. Nov-Mar: 10:00-12:15, 14:00-17:15. Apr-Oct: 10:00-18:15.",
-    tags: ["architecture"]
-  },
-  {
-    id: 14,
-    city: "beauvais",
-    category: "find",
-    difficulty: "uncommon",
-    icon: "🔍",
-    title: "Two clocks, five centuries apart",
-    location: "Cathédrale Saint-Pierre, Beauvais",
-    desc: "Everyone sees the astronomical clock by Auguste-Lucien Vérité (1865-1868): 12 metres high, 90,000 components, 52 dials. But in a chapel near the north entrance sits a much older clock, 14th or 15th century, possibly the oldest fully preserved mechanical clock still functioning in Europe. Find both.",
-    context: "The Vérité clock is impossible to miss. It performs at 10:30, 11:30, 14:30, 15:30, and 16:30 (extra shows at 12:30 and 13:30 April-October). The medieval clock is in a side chapel and has no performance times, no crowds, and almost no signage. Ask at the entrance if you cannot find it.",
-    proof: "Photos of both clocks.",
-    practical: "Free entry. Time your visit to catch the astronomical clock performance.",
-    tags: ["architecture", "hidden"]
-  },
-  {
-    id: 15,
-    city: "beauvais",
-    category: "photograph",
-    difficulty: "common",
-    icon: "📷",
-    title: "Where Gothic ambition stopped",
-    location: "Cathédrale Saint-Pierre, Beauvais",
-    desc: "Beauvais Cathedral has no nave. In its place stands the Basse Oeuvre, a Carolingian church from roughly 950-998 AD. Photograph the junction where the 10th-century wall meets the 13th-century Gothic transept. One building is 19 metres tall. The other reaches 48.5 metres. The contrast is the entire history of medieval architecture in one frame.",
-    context: "The best view of this junction is from outside, on the south side. The Basse Oeuvre is the small, simple stone building attached to the towering Gothic choir and transept. Inside, the connection is less visible because you cannot access the Basse Oeuvre from the cathedral interior.",
-    proof: "Photo showing both structures and the height difference.",
-    practical: "Exterior, always accessible. Interior of Basse Oeuvre has limited access.",
-    tags: ["architecture", "history"]
-  },
-  {
-    id: 16,
-    city: "beauvais",
-    category: "find",
-    difficulty: "rare",
-    icon: "🔍",
-    title: "The scars of collapse",
-    location: "Cathédrale Saint-Pierre, Beauvais",
-    desc: "In 1573, the crossing tower reached 153 metres. For four years it was the tallest building in the world. On Ascension Day, after mass, it fell. Find the evidence: in the north transept, four large wood-and-steel lateral trusses at different heights, installed in the 1990s. On the main floor, a massive brace rises at a 45-degree angle as emergency support. These are not historical. They are keeping the building standing now.",
-    context: "The emergency supports are visible from the transept floor. They are modern steel and timber, clearly different from the medieval stone. The 45-degree brace on the main floor is the most dramatic: a reminder that this building is still fighting gravity. The 1573 collapse is why the nave was never built. All resources went to repair.",
-    proof: "Photo of the emergency structural supports with the Gothic vault visible above them.",
-    practical: "Free entry. The supports are in the transept, visible from the main floor.",
-    tags: ["architecture", "history", "hidden"]
-  },
-  {
-    id: 17,
-    city: "beauvais",
-    category: "attend",
-    difficulty: "common",
-    icon: "🎭",
-    title: "The cockerel sings",
-    location: "Cathédrale Saint-Pierre, Beauvais",
-    desc: "The astronomical clock performs multiple times daily. Before each hour, a mechanical cockerel sings and beats its wings. Then 50 figurines begin to move in a depiction of the Last Judgment. The clock shows the time in 18 cities, planetary positions, and tidal times on 52 dials. Vérité spent three years building 90,000 components. See it move.",
-    context: "Performance times: 10:30, 11:30, 14:30, 15:30, 16:30 (plus 12:30 and 13:30 in summer). Arrive a few minutes early. The crowd gathers fast. The cockerel is the signal that the show is starting.",
-    proof: "Video of the clock in motion.",
-    practical: "Free. Included with cathedral visit.",
-    tags: ["architecture", "art"]
-  },
-  {
-    id: 18,
-    city: "beauvais",
-    category: "find",
-    difficulty: "uncommon",
-    icon: "🔍",
-    title: "The other church across the square",
-    location: "Église Saint-Étienne, Beauvais",
-    desc: "50 metres from the cathedral, mostly ignored. Saint-Étienne has something the cathedral does not: a Romanesque nave (12th century) attached to a Gothic choir. Plus stained glass by the Le Prince family (1524) that rivals anything in the cathedral. The Tree of Jesse window is here. So is the rare combination of two architectural eras under one roof.",
-    context: "Saint-Étienne is across the Place Jeanne Hachette from the cathedral. If the cathedral shows what happens when you aim too high, Saint-Étienne shows what happens when you build within your means. It is intact, complete, and quietly confident. Most visitors never cross the square.",
-    proof: "Photo from inside showing both the Romanesque nave and Gothic choir in one frame.",
-    practical: "Free entry. Hours vary. Often closed midday.",
-    tags: ["architecture", "art", "hidden"]
-  }
-];
+fetch('quests.json')
+  .then(r => r.json())
+  .then(data => {
+    quests = data;
+    renderQuests();
+    addMapMarkers();
+  });
 
 // Render quests
 const questsContainer = document.getElementById('quests');
@@ -878,12 +629,13 @@ function renderQuests() {
               <div class="quest-detail-label">Practical</div>
               <div class="quest-detail-text">${q.practical}</div>
             </div>
+            ${q.seasonal ? `<div class="quest-detail-section"><div class="quest-detail-label">Seasonal</div><div class="quest-detail-text">${q.seasonal}</div></div>` : ''}
             <div class="quest-tags">
               ${q.tags.map(t => `<span class="quest-tag">${t}</span>`).join('')}
             </div>
             <div class="quest-actions">
               <button class="btn-complete" onclick="event.stopPropagation()">I did this</button>
-              <a class="btn-lux" href="https://churchheritage.eu" target="_blank" onclick="event.stopPropagation()">Read more on LUX →</a>
+              <a class="btn-lux" href="https://churchheritage.eu" target="_blank" onclick="event.stopPropagation()">Read more on LUX \u2192</a>
             </div>
           </div>
         </div>
@@ -929,10 +681,15 @@ document.querySelectorAll('.city-tab').forEach(tab => {
     renderQuests();
 
     if (activeCity !== 'all') {
-      const coords = { amiens: [49.8950, 2.3022], rouen: [49.4401, 1.0939], beauvais: [49.4313, 2.0818] };
-      map.setView(coords[activeCity], 14, { animate: true });
+      const coords = {
+        utrecht: [52.0907, 5.1214],
+        amiens: [49.8950, 2.3022],
+        rouen: [49.4401, 1.0939],
+        beauvais: [49.4313, 2.0818]
+      };
+      map.setView(coords[activeCity], 13, { animate: true });
     } else {
-      map.setView([49.6, 1.8], 9, { animate: true });
+      map.setView([50.5, 2.5], 7, { animate: true });
     }
   });
 });
@@ -941,7 +698,7 @@ document.querySelectorAll('.city-tab').forEach(tab => {
 const map = L.map('map', {
   zoomControl: false,
   attributionControl: false
-}).setView([49.6, 1.8], 9);
+}).setView([50.5, 2.5], 7);
 
 L.control.zoom({ position: 'topright' }).addTo(map);
 
@@ -949,25 +706,35 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 18
 }).addTo(map);
 
-const cities = [
-  { name: "Amiens", lat: 49.8950, lng: 2.3022, count: 6 },
-  { name: "Rouen", lat: 49.4401, lng: 1.0939, count: 6 },
-  { name: "Beauvais", lat: 49.4313, lng: 2.0818, count: 6 }
-];
-
-cities.forEach(city => {
-  const icon = L.divIcon({
-    className: 'city-marker',
-    iconSize: [14, 14]
+function addMapMarkers() {
+  const cityData = {};
+  quests.forEach(q => {
+    if (!cityData[q.city]) cityData[q.city] = 0;
+    cityData[q.city]++;
   });
 
-  L.marker([city.lat, city.lng], { icon })
-    .addTo(map)
-    .bindPopup(`<strong>${city.name}</strong><span class="popup-count">${city.count} quests</span>`);
-});
+  const coords = {
+    utrecht: { name: "Utrecht", lat: 52.0907, lng: 5.1214 },
+    amiens: { name: "Amiens", lat: 49.8950, lng: 2.3022 },
+    rouen: { name: "Rouen", lat: 49.4401, lng: 1.0939 },
+    beauvais: { name: "Beauvais", lat: 49.4313, lng: 2.0818 }
+  };
 
-// Initial render
-renderQuests();
+  Object.keys(coords).forEach(key => {
+    const city = coords[key];
+    const count = cityData[key] || 0;
+    const icon = L.divIcon({
+      className: 'city-marker',
+      iconSize: [14, 14]
+    });
+
+    L.marker([city.lat, city.lng], { icon })
+      .addTo(map)
+      .bindPopup(`<strong>${city.name}</strong><span class="popup-count">${count} quests</span>`);
+  });
+}
+
 </script>
 </body>
 </html>
+
