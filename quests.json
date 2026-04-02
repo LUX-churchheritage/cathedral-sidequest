@@ -1,0 +1,536 @@
+[
+  {
+    "id": 1,
+    "city": "amiens",
+    "region": "amiens",
+    "category": "find",
+    "difficulty": "common",
+    "icon": "👼",
+    "title": "The Weeping Angel",
+    "location": "Cathédrale Notre-Dame, Amiens",
+    "desc": "Find the Ange Pleureur behind the choir. It sits above the effigy of Canon Guilain Lucas, carved by Nicolas Blasset around 1628. One leg tucked under, head on hand, the other hand resting on a skull. During WWI soldiers sent postcards of this angel home. It became a symbol for an entire generation.",
+    "context": "The angel is small and easy to miss. Most visitors never leave the nave. Walk past the choir, into the ambulatory, and look for the funeral monuments. The Weeping Angel is to the right of the axial chapel entrance.",
+    "proof": "Photo of the angel from the ambulatory.",
+    "practical": "Free entry. Open daily. No photography restrictions.",
+    "tags": [
+      "art",
+      "history",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 2,
+    "city": "amiens",
+    "region": "amiens",
+    "category": "find",
+    "difficulty": "common",
+    "icon": "🔀",
+    "title": "Walk the octagonal labyrinth",
+    "location": "Cathédrale Notre-Dame, Amiens",
+    "desc": "Find the labyrinth inlaid in the nave floor. Unlike the round labyrinth in Chartres, this one is octagonal. Black and white marble, 12.1 metres wide, laid in 1288. The centre stone originally bore the names of the cathedral's architects: Robert de Luzarches, Thomas de Cormont, and his son Renaud.",
+    "context": "The labyrinth is in the fourth and fifth bay of the nave. It is always visible, but chairs often cover parts of it. Walking it takes about 15 minutes if you follow the path without cutting corners.",
+    "proof": "Photo of yourself at the centre of the labyrinth.",
+    "practical": "Free. Always accessible during opening hours.",
+    "tags": [
+      "architecture",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 3,
+    "city": "amiens",
+    "region": "amiens",
+    "category": "photograph",
+    "difficulty": "uncommon",
+    "icon": "♈",
+    "title": "The Picardy Calendar",
+    "location": "Cathédrale Notre-Dame, Amiens (west facade)",
+    "desc": "Photograph the zodiac medallions at the base of the Saint Firmin portal on the west facade. Quatrefoil-shaped reliefs, eight centuries old, showing the agricultural calendar of medieval Picardy: pruning vines, harvesting wheat, slaughtering pigs. Each month paired with its zodiac sign.",
+    "context": "The medallions are at knee height. Most people look up at the portals and miss what is at their feet. You need decent light and a close-up to capture the detail. Morning light works best on the west facade.",
+    "proof": "Close-up photo of at least three consecutive months.",
+    "practical": "Free. Exterior, always accessible. Best in morning light.",
+    "tags": [
+      "art",
+      "architecture",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 4,
+    "city": "amiens",
+    "region": "amiens",
+    "category": "photograph",
+    "difficulty": "common",
+    "icon": "🗿",
+    "title": "Two Virgins, one face",
+    "location": "Cathédrale Notre-Dame, Amiens",
+    "desc": "The Vierge Dorée on the south transept portal is one of the most copied Madonnas in Europe. But the one outside is a casting from 1980. The original was moved inside to protect it from erosion. Photograph both and compare. Same face, 700 years apart in weathering.",
+    "context": "The exterior copy is on the Saint-Honoré portal (south transept). The original is inside the cathedral. Finding the interior original requires asking at the information desk or looking carefully near the south transept.",
+    "proof": "Side-by-side photos of both statues.",
+    "practical": "Free. The exterior is always visible. The interior requires cathedral opening hours.",
+    "tags": [
+      "art",
+      "architecture"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 5,
+    "city": "amiens",
+    "region": "amiens",
+    "category": "photograph",
+    "difficulty": "uncommon",
+    "icon": "⚔️",
+    "title": "The Bible they could read",
+    "location": "West facade, central portal (Portail du Jugement Dernier)",
+    "desc": "The west facade portals of Amiens contain 3,500+ sculpted figures. Before literacy, this was how the Bible was taught. The central portal shows the Last Judgment: Christ at the top, the saved on his right, the damned on his left. At knee height, quatrefoil medallions show virtues and vices in pairs. Find the pair of Courage and Cowardice. Courage holds a shield; Cowardice drops his sword and runs from a hare.",
+    "context": "The Portail du Jugement Dernier is the central portal. The virtue/vice medallions are at the lowest level, carved in pairs on either side. They are small and most visitors look up, not down.",
+    "proof": "Photo showing the Cowardice medallion with the hare.",
+    "practical": "Free. Exterior, always accessible. Best light morning or late afternoon.",
+    "tags": [
+      "art",
+      "history"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 6,
+    "city": "amiens",
+    "region": "amiens",
+    "category": "climb",
+    "difficulty": "rare",
+    "icon": "⬆️",
+    "title": "302 steps above the nave",
+    "location": "Cathédrale Notre-Dame, Amiens",
+    "desc": "Climb the south tower. 302 steps in a spiral staircase, groups of maximum 18. At the top you see the roof structure, the flying buttresses from above, and the Somme valley to the horizon. The tower tour includes a gallery 30 metres above the nave floor, where you look down into the largest Gothic interior in France.",
+    "context": "€7, closed on Tuesdays. Tours are guided on weekdays (15:00 and 16:30, April-September), self-guided on weekends. Book via e-ticket or arrive 15 minutes early. Limited to 18 people, so summer weekends sell out.",
+    "proof": "Photo from the tower gallery looking down into the nave.",
+    "practical": "€7. Closed Tuesdays. Arrive early. Not accessible for those with mobility issues.",
+    "tags": [
+      "architecture",
+      "panorama"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 7,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "find",
+    "difficulty": "common",
+    "icon": "🔍",
+    "title": "The heart of the Lionheart",
+    "location": "Cathédrale Notre-Dame, Rouen",
+    "desc": "Richard I of England died in 1199 after a crossbow bolt wound went septic. His body went to Fontevraud, his entrails to Poitiers, and his heart to Rouen. Find the sarcophagus in the right-hand aisle, past the altar. The Latin inscription reads: 'Hic cor conditum est Ricardi Anglorum Regis qui cor leonis dictus.'",
+    "context": "The tomb is in the choir area, which may be behind a gate during renovations. If accessible, look for the effigy of Richard carved on the sarcophagus lid. The heart itself was analysed in 2013 and found to have been embalmed with mercury, frankincense, and daisy.",
+    "proof": "Photo of the tomb and inscription.",
+    "practical": "Free entry. Check for renovation closures. Tue-Sat 09:00-19:00, Mon from 14:00.",
+    "tags": [
+      "history",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 8,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "photograph",
+    "difficulty": "common",
+    "icon": "📷",
+    "title": "Two towers, 300 years apart",
+    "location": "Cathédrale Notre-Dame, Rouen",
+    "desc": "The west facade of Rouen is asymmetric. The Tour Saint-Romain (left, 1145) is plain, Romanesque in its lower sections, 65 metres. The Tour de Beurre (right, 1488-1507) is Flamboyant Gothic, 77 metres. The name comes from papal dispensations allowing butter during Lent, sold to fund construction. Photograph both towers in one frame to capture 300 years of architectural change.",
+    "context": "Stand on the Rue du Gros-Horloge facing the cathedral for the classic view. The asymmetry is the point. This is not a design failure. It is 700 years of building, each generation adding in its own style.",
+    "proof": "Single photo showing both towers and the asymmetry.",
+    "practical": "Exterior. Always accessible.",
+    "tags": [
+      "architecture"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 9,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "🔍",
+    "title": "Monsters in the Booksellers' Portal",
+    "location": "Cathédrale Notre-Dame, Rouen (north transept)",
+    "desc": "The Portail des Libraires is named after the scribes whose shops once stood in the adjacent courtyard. Built from 1278. The portal contains over 150 medallions carved with grotesques: mermaids, harpies, tritons, monsters, hybrid creatures. Find the quatrefoil medallions along the jambs. They are small. Most visitors walk straight through without noticing them.",
+    "context": "The portal is on the north side of the transept. The medallions are in groups of five, carved into the stone jambs at various heights. Some are at eye level, some lower. Bring a phone with zoom or binoculars for the higher ones.",
+    "proof": "Close-up photos of three different grotesque creatures.",
+    "practical": "Exterior, always accessible. Best in overcast light (no harsh shadows).",
+    "tags": [
+      "art",
+      "architecture",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 10,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "attend",
+    "difficulty": "rare",
+    "icon": "🎭",
+    "title": "Down into the 11th-century crypt",
+    "location": "Cathédrale Notre-Dame, Rouen",
+    "desc": "The crypt dates to the original Romanesque cathedral, before the Gothic one was built on top of it. It sits beneath the choir and was excavated between 1931 and 1934. Tours are guided, in French only, and run on Saturdays and Sundays at 14:30. No booking needed, but groups are capped at 18.",
+    "context": "Access is through the Chapel of Saint Joan of Arc on the south side of the choir. The crypt gives you a sense of the scale of the Romanesque building that was demolished to make way for the current cathedral. It has been open to visitors since 1956.",
+    "proof": "Photo from inside the crypt.",
+    "practical": "Sat-Sun 14:30 only. French guided tour. €3 for groups. Free for individuals (verify).",
+    "tags": [
+      "architecture",
+      "history",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 11,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "🔍",
+    "title": "Death dances at the Aître",
+    "location": "Aître Saint-Maclou, Rouen",
+    "desc": "Not a church, but a medieval ossuary 200 metres from the cathedral. Built after the Black Death of 1348 killed roughly 75% of the parish. The half-timbered galleries around the courtyard are carved with skulls, femurs, coffins, gravediggers' tools, and a Danse Macabre. Find the carvings on the wooden columns. They are not decorative. They are a record.",
+    "context": "The Aître is on Rue Martainville, behind the Church of Saint-Maclou. The carvings are on the column bases and beams of the galleries. The courtyard has been restored and now houses cultural spaces, but the bones were removed in 1779. The carvings remain.",
+    "proof": "Photos of three different macabre carvings on the gallery columns.",
+    "practical": "Free entry to courtyard. Closed Mondays. Check visiterouen.com for hours.",
+    "tags": [
+      "history",
+      "hidden",
+      "sacred"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 12,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "listen",
+    "difficulty": "rare",
+    "icon": "🎵",
+    "title": "Widor's Michelangelo",
+    "location": "Abbatiale Saint-Ouen, Rouen",
+    "desc": "Saint-Ouen is not the cathedral, but some argue it is the finer building. It holds an unaltered Cavaillé-Coll organ that composer Charles-Marie Widor called 'a Michelangelo of an organ.' The church itself is 137 metres long with 33-metre vaults and what may be the finest collection of 14th-century stained glass in France.",
+    "context": "Saint-Ouen is 400 metres from the cathedral. The organ is not always playing, but if you visit during a service or a concert, you hear what Widor heard. Check the schedule at the tourist office. Even without the organ, the interior is worth the walk: light, height, and an unusual lantern tower over the crossing.",
+    "proof": "Photo of the Cavaillé-Coll organ case, or a recording if the organ is playing.",
+    "practical": "Free entry. Check hours at visiterouen.com. Often overlooked by visitors who stop at the cathedral.",
+    "tags": [
+      "music",
+      "architecture"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 13,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "photograph",
+    "difficulty": "common",
+    "icon": "🚪",
+    "title": "Five porches, one church",
+    "location": "Église Saint-Maclou, west front",
+    "desc": "Saint-Maclou has five porches fanning out from its west front. That's unusual. Most churches have three. The porches sit in a shallow arc, each topped with a carved gable, crowding together like folded hands. Construction started in 1437, Flamboyant Gothic at its most restless. The church took 84 years to finish. The stone is still moving.",
+    "context": "Stand directly in front on the pedestrian street. The five-porch arrangement is visible from there. Each porch has a different tympanum scene. The central door has Renaissance panels from the 1550s carved with scenes of the Baptism of Christ and the Good Shepherd. Don't confuse Saint-Maclou with the Aître Saint-Maclou two streets away. That's the ossuary.",
+    "proof": "Photo capturing all five porches in one frame.",
+    "practical": "Free entry. Open Sat-Mon 10:00-12:00, 14:00-17:30. 200m east of the cathedral.",
+    "tags": [
+      "architecture"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 14,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "🎨",
+    "title": "The doors that changed style",
+    "location": "Église Saint-Maclou, main porches",
+    "desc": "The church is Flamboyant Gothic. The doors are not. Carved wooden panels from the 1550s, Renaissance in style, attributed to Jean Goujon or his workshop. A hundred years younger than the stone around them. The central porch shows the Baptism of Jesus. The right door, the Good Shepherd. Gothic frames, Renaissance art. Two centuries meeting at the threshold.",
+    "context": "The carved panels are on the main doors of the central and side porches. Best seen when the outer doors are closed and the inner panels visible. If the church is open, the doors may be folded back. Ask inside if you cannot see them from the street.",
+    "proof": "Close-up photo of one carved door panel showing Renaissance figures.",
+    "practical": "Visible from outside when doors are closed. Interior access during opening hours.",
+    "tags": [
+      "art",
+      "history"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 15,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "photograph",
+    "difficulty": "rare",
+    "icon": "🏚️",
+    "title": "The tallest ruin in Normandy",
+    "location": "Abbaye de Jumièges, 30 min from Rouen",
+    "desc": "Two towers, 46 metres, standing over nothing. The nave has no roof. The walls reach 25 metres and hold up sky. Founded in 654 by Saint Philibert. Vikings burned it in 841. William the Conqueror attended its re-consecration in 1067. After the Revolution, it became a stone quarry. What they didn't bother to take is still here. The twin towers are the oldest large Romanesque facade in Normandy.",
+    "context": "The ruins are in a 15-hectare enclosed park. A free app offers 3D reconstructions of how the abbey looked before the Revolution. The best photograph: stand in the former nave facing west, towers framing sky. Afternoon light is best.",
+    "proof": "Photo from inside the roofless nave with both towers visible.",
+    "practical": "€7. April hours: 9:30-13:00, 14:30-17:30. 30 min by car from Rouen via D982 along the Seine. No public transport.",
+    "tags": [
+      "architecture",
+      "history"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 16,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "💕",
+    "title": "The king's shortcut to his mistress",
+    "location": "Abbaye de Jumièges, passage between churches",
+    "desc": "In 1450, Charles VII stayed at Jumièges. The abbey has two churches side by side: Notre-Dame and Saint-Pierre. A covered passage connects them. Charles used it every morning to visit Agnès Sorel. She died at Jumièges that same year, age 28. The passage still exists. The affair ended. The architecture remained.",
+    "context": "The Charles VII passage is between the two church buildings. Saint-Pierre has Carolingian remains from the earliest phase of the abbey. The passage itself is a corridor. What makes it a quest is knowing the story behind it.",
+    "proof": "Photo of the passage between the two churches.",
+    "practical": "Included in abbey admission (€7). Same hours as above.",
+    "tags": [
+      "history"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 17,
+    "city": "beauvais",
+    "region": "beauvais",
+    "category": "photograph",
+    "difficulty": "common",
+    "icon": "📷",
+    "title": "The highest Gothic vault ever built",
+    "location": "Cathédrale Saint-Pierre, Beauvais",
+    "desc": "Stand in the choir and look up. 48.5 metres. Amiens is 42.3. Chartres is 37. Beauvais beat them all and paid for it. The vault collapsed in 1284, twelve years after completion. It was rebuilt at the same height. They did not learn. Or they refused to compromise.",
+    "context": "The choir is the first thing you enter (there is no nave). The height is disorienting because the proportions are extreme: very tall, very narrow. The effect is vertigo, not grandeur. Photograph from the centre of the choir looking straight up to capture the vault ribs converging.",
+    "proof": "Photo looking straight up at the vault from the choir floor.",
+    "practical": "Free entry. Nov-Mar: 10:00-12:15, 14:00-17:15. Apr-Oct: 10:00-18:15.",
+    "tags": [
+      "architecture"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 18,
+    "city": "beauvais",
+    "region": "beauvais",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "🔍",
+    "title": "Two clocks, five centuries apart",
+    "location": "Cathédrale Saint-Pierre, Beauvais",
+    "desc": "Everyone sees the astronomical clock by Auguste-Lucien Vérité (1865-1868): 12 metres high, 90,000 components, 52 dials. But in a chapel near the north entrance sits a much older clock, 14th or 15th century, possibly the oldest fully preserved mechanical clock still functioning in Europe. Find both.",
+    "context": "The Vérité clock is impossible to miss. It performs at 10:30, 11:30, 14:30, 15:30, and 16:30 (extra shows at 12:30 and 13:30 April-October). The medieval clock is in a side chapel and has no performance times, no crowds, and almost no signage. Ask at the entrance if you cannot find it.",
+    "proof": "Photos of both clocks.",
+    "practical": "Free entry. Time your visit to catch the astronomical clock performance.",
+    "tags": [
+      "architecture",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 19,
+    "city": "beauvais",
+    "region": "beauvais",
+    "category": "photograph",
+    "difficulty": "common",
+    "icon": "📷",
+    "title": "Where Gothic ambition stopped",
+    "location": "Cathédrale Saint-Pierre, Beauvais",
+    "desc": "Beauvais Cathedral has no nave. In its place stands the Basse Oeuvre, a Carolingian church from roughly 950-998 AD. Photograph the junction where the 10th-century wall meets the 13th-century Gothic transept. One building is 19 metres tall. The other reaches 48.5 metres. The contrast is the entire history of medieval architecture in one frame.",
+    "context": "The best view of this junction is from outside, on the south side. The Basse Oeuvre is the small, simple stone building attached to the towering Gothic choir and transept. Inside, the connection is less visible because you cannot access the Basse Oeuvre from the cathedral interior.",
+    "proof": "Photo showing both structures and the height difference.",
+    "practical": "Exterior, always accessible. Interior of Basse Oeuvre has limited access.",
+    "tags": [
+      "architecture",
+      "history"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 20,
+    "city": "beauvais",
+    "region": "beauvais",
+    "category": "find",
+    "difficulty": "rare",
+    "icon": "🔍",
+    "title": "The scars of collapse",
+    "location": "Cathédrale Saint-Pierre, Beauvais",
+    "desc": "In 1573, the crossing tower reached 153 metres. For four years it was the tallest building in the world. On Ascension Day, after mass, it fell. Find the evidence: in the north transept, four large wood-and-steel lateral trusses at different heights, installed in the 1990s. On the main floor, a massive brace rises at a 45-degree angle as emergency support. These are not historical. They are keeping the building standing now.",
+    "context": "The emergency supports are visible from the transept floor. They are modern steel and timber, clearly different from the medieval stone. The 45-degree brace on the main floor is the most dramatic: a reminder that this building is still fighting gravity. The 1573 collapse is why the nave was never built. All resources went to repair.",
+    "proof": "Photo of the emergency structural supports with the Gothic vault visible above them.",
+    "practical": "Free entry. The supports are in the transept, visible from the main floor.",
+    "tags": [
+      "architecture",
+      "history",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 21,
+    "city": "beauvais",
+    "region": "beauvais",
+    "category": "attend",
+    "difficulty": "common",
+    "icon": "🎭",
+    "title": "The cockerel sings",
+    "location": "Cathédrale Saint-Pierre, Beauvais",
+    "desc": "The astronomical clock performs multiple times daily. Before each hour, a mechanical cockerel sings and beats its wings. Then 50 figurines begin to move in a depiction of the Last Judgment. The clock shows the time in 18 cities, planetary positions, and tidal times on 52 dials. Vérité spent three years building 90,000 components. See it move.",
+    "context": "Performance times: 10:30, 11:30, 14:30, 15:30, 16:30 (plus 12:30 and 13:30 in summer). Arrive a few minutes early. The crowd gathers fast. The cockerel is the signal that the show is starting.",
+    "proof": "Video of the clock in motion.",
+    "practical": "Free. Included with cathedral visit.",
+    "tags": [
+      "architecture",
+      "art"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 22,
+    "city": "beauvais",
+    "region": "beauvais",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "🔍",
+    "title": "The other church across the square",
+    "location": "Église Saint-Étienne, Beauvais",
+    "desc": "50 metres from the cathedral, mostly ignored. Saint-Étienne has something the cathedral does not: a Romanesque nave (12th century) attached to a Gothic choir. Plus stained glass by the Le Prince family (1524) that rivals anything in the cathedral. The Tree of Jesse window is here. So is the rare combination of two architectural eras under one roof.",
+    "context": "Saint-Étienne is across the Place Jeanne Hachette from the cathedral. If the cathedral shows what happens when you aim too high, Saint-Étienne shows what happens when you build within your means. It is intact, complete, and quietly confident. Most visitors never cross the square.",
+    "proof": "Photo from inside showing both the Romanesque nave and Gothic choir in one frame.",
+    "practical": "Hours vary. Visits by request only. Contact Beauvais tourist office in advance.",
+    "tags": [
+      "architecture",
+      "art",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 23,
+    "city": "utrecht",
+    "region": "utrecht",
+    "category": "photograph",
+    "difficulty": "common",
+    "icon": "🟫",
+    "title": "The gap where the nave was",
+    "location": "Domplein, Utrecht",
+    "desc": "The Dom Tower and the Domkerk don't touch. Between them, an open square. In 1674, a tornado ripped out the entire nave. It was never rebuilt. The tower stands 112 metres tall on one side. The church begins 40 metres away. In between: nothing. The most telling architectural feature in Utrecht is an absence.",
+    "context": "Stand on the Domplein facing south. The tower is behind you, the church entrance ahead. The gap is the square itself. Most people cross it without realising what's missing. The outline of the former nave columns is marked in the pavement.",
+    "proof": "Photo from the Domplein showing the tower and church with the gap between them.",
+    "practical": "Exterior. Always accessible.",
+    "tags": [
+      "architecture",
+      "history"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 24,
+    "city": "utrecht",
+    "region": "utrecht",
+    "category": "climb",
+    "difficulty": "legendary",
+    "icon": "🔔",
+    "title": "465 steps and 32 tonnes of bronze",
+    "location": "Domtoren, Utrecht",
+    "desc": "The Dom Tower is 112 metres. Tallest church tower in the Netherlands. The climb is 465 steps, guided, 75 minutes. At 49 metres: the ringing chamber with 14 medieval bells weighing 32,000 kg total. The largest, Salvator, weighs 8,200 kg. At 80 metres: the Hemony carillon, 50 bells, 33 cast by the brothers Hemony in 1664. At 112 metres: the platform. On a clear day, you see 40 kilometres.",
+    "context": "Tours run hourly from 11:00 to 17:00. Book in advance on domtoren.nl. No bags, no tripods. Lockers available. St. Michael's Chapel at 11 metres is the first stop. The views build as you climb.",
+    "proof": "Photo from the top platform with Utrecht below.",
+    "practical": "€12.50. Guided tour only, 75 min. Book ahead. Closed on King's Day (April 26).",
+    "tags": [
+      "architecture",
+      "panorama"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 25,
+    "city": "utrecht",
+    "region": "utrecht",
+    "category": "find",
+    "difficulty": "rare",
+    "icon": "⚱️",
+    "title": "Two emperors under the floor",
+    "location": "Domkerk, choir floor",
+    "desc": "In the choir floor, small markers identify where the organs of two Holy Roman Emperors were buried: Conrad II (d. 1039) and Henry IV (d. 1106). Their bodies went to Speyer. Their hearts and entrails stayed in Utrecht. Next to them lies Pope Adrian VI, the only Dutch pope, who died in 1523. Three men who shaped European history, reduced to stones in a floor most visitors walk over without looking down.",
+    "context": "The markers are in the choir area. Adrian VI's tomb is the largest monument in the church and easier to find. The emperor markers are smaller and require attention. Ask a volunteer if you can't locate them.",
+    "proof": "Photo of at least two of the three markers/tombs.",
+    "practical": "Free entry. Apr-Nov: Mon-Fri 10:00-17:00, Sat 10:00-15:15, Sun 12:30-17:00.",
+    "tags": [
+      "history",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 26,
+    "city": "utrecht",
+    "region": "utrecht",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "🏛️",
+    "title": "Pink columns from the Eifel",
+    "location": "Pieterskerk, nave",
+    "desc": "Ten columns in the nave, each carved from a single piece of red Eifel sandstone. Shipped from Germany by river, over a thousand years ago. They have alternating patterns: zigzag, herringbone, spiral. The Pieterskerk was consecrated in 1048. It is the oldest church in Utrecht. The columns survived two fires and a tornado.",
+    "context": "The church is a Romanesque basilica. Enter through the main entrance and look at the nave arcade. The columns are impossible to miss once you know to look at the stone colour. Compare the red sandstone to the lighter stone of the arches above.",
+    "proof": "Photo of two columns showing different carved patterns.",
+    "practical": "Free. Check pieterskerk-utrecht.nl for hours. Often open Saturday afternoons.",
+    "tags": [
+      "architecture"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 27,
+    "city": "utrecht",
+    "region": "utrecht",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "🗿",
+    "title": "Bishop Bernold's crypt",
+    "location": "Pieterskerk, north chapel (Noorderkapel)",
+    "desc": "Below the north chapel, stairs lead to a crypt. Bishop Bernold (d. 1054) built the church and was buried here. His sarcophagus was placed in the crypt in 1952. The crypt is small, low, and quiet. One of the few Romanesque crypts in the Netherlands still accessible.",
+    "context": "The stairs are in the Noorderkapel (north chapel). Not always open. Ask a volunteer or check the website. The crypt is small enough that three people fill it.",
+    "proof": "Photo from inside the crypt.",
+    "practical": "Free. Access dependent on volunteer availability. Check ahead.",
+    "tags": [
+      "history",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 28,
+    "city": "utrecht",
+    "region": "utrecht",
+    "category": "listen",
+    "difficulty": "common",
+    "icon": "🎹",
+    "title": "A church full of machines",
+    "location": "Museum Speelklok (former Buurkerk), Utrecht",
+    "desc": "The Buurkerk dates from around 1000. It is no longer a church. Since 1984 it houses Museum Speelklok: a collection of self-playing instruments. Music boxes, barrel organs, pianolas, a carillon. One exception: a real organ built by Witte in 1831, played by humans during occasional concerts. A thousand-year-old church whose congregation is now mechanical.",
+    "context": "The museum is on Steenweg, central Utrecht. The organ concerts happen a few times a year. Even without a concert, the demonstrations of mechanical instruments run throughout the day. You hear a medieval church filled with 19th-century automata.",
+    "proof": "Photo of a self-playing instrument with the church architecture visible behind it.",
+    "practical": "Museum admission required. Check museumspeelklok.nl for prices and hours.",
+    "tags": [
+      "music",
+      "architecture"
+    ],
+    "seasonal": null
+  }
+]
