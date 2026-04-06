@@ -532,5 +532,24 @@
       "architecture"
     ],
     "seasonal": null
+  },
+  {
+    "id": 29,
+    "city": "rouen",
+    "region": "rouen",
+    "category": "attend",
+    "difficulty": "uncommon",
+    "icon": "⛪",
+    "title": "The building does what it was built for",
+    "location": "Cathédrale Notre-Dame, Rouen",
+    "desc": "These buildings were not built as museums. They were built for this. Attend a mass in Rouen Cathedral. The acoustics change when there are voices in them. The light through the windows has a function when there is liturgy beneath it. For 800 years, people have sat in these seats and looked up at the same vault. You are not visiting. You are participating.",
+    "context": "Masses on Saturday at 8:30 and 10:30. Sit in the nave or choir if possible. You do not need to be Catholic to attend. Dress respectfully. The mass lasts about an hour. Photography during the service is not appropriate.",
+    "proof": "No photo. Write one sentence about what you noticed that you would not have noticed as a tourist.",
+    "practical": "Free. Check the parish notice board at the entrance for any schedule changes.",
+    "tags": [
+      "sacred",
+      "architecture"
+    ],
+    "seasonal": null
   }
 ]
