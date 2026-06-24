@@ -529,15 +529,15 @@
 
 <div class="stats-bar">
   <div class="stat">
-    <div class="stat-number">28</div>
+    <div class="stat-number" id="stat-quests">—</div>
     <div class="stat-label">Quests</div>
   </div>
   <div class="stat">
-    <div class="stat-number">4</div>
+    <div class="stat-number" id="stat-cities">—</div>
     <div class="stat-label">Cities</div>
   </div>
   <div class="stat">
-    <div class="stat-number">6</div>
+    <div class="stat-number" id="stat-categories">—</div>
     <div class="stat-label">Categories</div>
   </div>
 </div>
@@ -554,6 +554,7 @@
   <button class="filter-btn" data-filter="listen">Listen</button>
   <button class="filter-btn" data-filter="climb">Climb</button>
   <button class="filter-btn" data-filter="attend">Attend</button>
+  <button class="filter-btn" data-filter="taste">Taste</button>
   <button class="filter-btn" data-filter="create">Create</button>
   <div class="filter-separator"></div>
   <span class="filter-label">Difficulty</span>
@@ -569,6 +570,8 @@
   <button class="city-tab" data-city="amiens">Amiens</button>
   <button class="city-tab" data-city="rouen">Rouen</button>
   <button class="city-tab" data-city="beauvais">Beauvais</button>
+  <button class="city-tab" data-city="chartres">Chartres</button>
+  <button class="city-tab" data-city="paris">Paris</button>
 </div>
 
 <div class="quests" id="quests"></div>
@@ -585,6 +588,9 @@ fetch('quests.json')
   .then(r => r.json())
   .then(data => {
     quests = data;
+    document.getElementById('stat-quests').textContent = quests.length;
+    document.getElementById('stat-cities').textContent = new Set(quests.map(q => q.city)).size;
+    document.getElementById('stat-categories').textContent = new Set(quests.map(q => q.category)).size;
     renderQuests();
     addMapMarkers();
   });
@@ -685,7 +691,9 @@ document.querySelectorAll('.city-tab').forEach(tab => {
         utrecht: [52.0907, 5.1214],
         amiens: [49.8950, 2.3022],
         rouen: [49.4401, 1.0939],
-        beauvais: [49.4313, 2.0818]
+        beauvais: [49.4313, 2.0818],
+        chartres: [48.4474, 1.4877],
+        paris: [48.8530, 2.3499]
       };
       map.setView(coords[activeCity], 13, { animate: true });
     } else {
@@ -717,7 +725,9 @@ function addMapMarkers() {
     utrecht: { name: "Utrecht", lat: 52.0907, lng: 5.1214 },
     amiens: { name: "Amiens", lat: 49.8950, lng: 2.3022 },
     rouen: { name: "Rouen", lat: 49.4401, lng: 1.0939 },
-    beauvais: { name: "Beauvais", lat: 49.4313, lng: 2.0818 }
+    beauvais: { name: "Beauvais", lat: 49.4313, lng: 2.0818 },
+    chartres: { name: "Chartres", lat: 48.4474, lng: 1.4877 },
+    paris: { name: "Paris", lat: 48.8530, lng: 2.3499 }
   };
 
   Object.keys(coords).forEach(key => {

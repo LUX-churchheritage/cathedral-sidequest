@@ -532,5 +532,374 @@
       "architecture"
     ],
     "seasonal": null
+  },
+  {
+    "id": 29,
+    "city": "chartres",
+    "region": "chartres",
+    "category": "find",
+    "difficulty": "common",
+    "icon": "🔵",
+    "title": "The Blue That Has No Name",
+    "location": "Cathédrale Notre-Dame, Chartres",
+    "desc": "Find the Vierge de la Belle Verrière — the Blue Virgin window — in the south choir aisle. The central panel dates to around 1180, making it one of the oldest pieces of glass still in situ in any Gothic cathedral. The blue is not reproducible. Chemists have tried. The exact silica composition was lost with the medieval glassmakers.",
+    "context": "The window is in the second bay of the south choir aisle, easy to spot once your eyes adjust from the nave. The 12th-century Virgin panel sits in the centre; the surrounding angels date from the 13th century. Come in the morning when light hits it directly.",
+    "proof": "Photo of the Blue Virgin window with the morning light in it.",
+    "practical": "Free entry. Open daily. Best light: before 11h.",
+    "tags": [
+      "art",
+      "architecture",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 30,
+    "city": "chartres",
+    "region": "chartres",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "🕍",
+    "title": "Walk the Labyrinth on a Friday",
+    "location": "Cathédrale Notre-Dame, Chartres — nave",
+    "desc": "Chartres has the most complete medieval labyrinth in existence: 261.5 metres of path coiled into a circle 12.89 metres wide. It was laid around 1205. On most days it is covered by chairs. On Fridays from April to October, the chairs are removed and you can walk it. Pilgrims once did this on their knees as a substitute for the journey to Jerusalem.",
+    "context": "The labyrinth sits in the centre of the nave, in bays 7 through 9. The brass plate at the centre used to carry an image — lost during the Revolution. Walking without stopping takes about 45 minutes. Most people give up. Finish it.",
+    "proof": "Photo of yourself at the centre of the labyrinth.",
+    "practical": "Free. Fridays April–October, chairs removed roughly 10h–17h.",
+    "tags": [
+      "architecture",
+      "history",
+      "hidden"
+    ],
+    "seasonal": "April–October, Fridays only"
+  },
+  {
+    "id": 31,
+    "city": "chartres",
+    "region": "chartres",
+    "category": "listen",
+    "difficulty": "uncommon",
+    "icon": "🎵",
+    "title": "The Organ That Survived the Revolution",
+    "location": "Cathédrale Notre-Dame, Chartres — west tribune",
+    "desc": "The Grand Orgue of Chartres has its oldest pipes from 1542, making it one of the oldest playable organs in France. It was enlarged and rebuilt over five centuries without losing its 16th-century case. During the Revolution, when most church organs were melted down for cannon metal, this one was saved because the city declared it a public musical instrument.",
+    "context": "The organ is above the west entrance on the tribune. Free recitals are held on Sunday afternoons at 16h45 after Vespers, and on Tuesday and Thursday evenings in summer. Sit beneath it rather than in the choir — the direct sound from the pipes fills the nave differently than the echo.",
+    "proof": "Audio recording or photo taken during a recital.",
+    "practical": "Free recitals Sundays 16h45. Summer evenings Tue/Thu check local programme. No flash during recitals.",
+    "tags": [
+      "music",
+      "history"
+    ],
+    "seasonal": "Recitals year-round; evening concerts summer only"
+  },
+  {
+    "id": 32,
+    "city": "chartres",
+    "region": "chartres",
+    "category": "taste",
+    "difficulty": "common",
+    "icon": "☕",
+    "title": "Coffee with a View of the Apse",
+    "location": "Rue du Cygne / Rue des Changes area, Chartres",
+    "desc": "The streets immediately east of the cathedral — Rue du Cygne, Rue des Changes, the steps down to the Eure — are the old pilgrim quarter. The medieval infrastructure of hospitality (inns, bakeries, water) is still faintly readable in the street plan. Find a seat somewhere with a sightline to the flying buttresses. Sit long enough for the scale to register.",
+    "context": "Le Serpente on Rue du Cygne has been feeding people near this cathedral for decades. The terrace on Rue des Changes gives you the south transept. The lower town along the Eure gives you the apse reflected in water if the light is right. Pick one. Do not rush.",
+    "proof": "Photo of your coffee or food with the cathedral visible behind it.",
+    "practical": "Le Serpente open daily. Many options closed Monday.",
+    "tags": [
+      "neighbourhood",
+      "slow"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 33,
+    "city": "chartres",
+    "region": "chartres",
+    "category": "find",
+    "difficulty": "rare",
+    "icon": "🧎",
+    "title": "The Veil in the Treasury",
+    "location": "Cathédrale Notre-Dame, Chartres — Treasury (Chapelle Saint-Piat)",
+    "desc": "Chartres claims to hold the Sancta Camisia — the veil or tunic worn by the Virgin Mary at the Annunciation, given to the cathedral by Charlemagne in 876. It is a piece of silk roughly 5.35 metres long. In 911 it was held up from the city walls during a Viking siege; according to the chronicles, the attack failed. The relic was the reason Chartres became a pilgrimage destination before the Gothic cathedral existed.",
+    "context": "The Sancta Camisia is displayed in a reliquary in the Chapelle Saint-Piat, accessed via the north ambulatory. The chapel also holds other treasury items including medieval jewellery and a piece of the True Cross. The exhibition is small and often uncrowded even when the nave is full.",
+    "proof": "Photo of the reliquary or the chapel interior.",
+    "practical": "Small entry fee (approx. €3). Open daily in season. Check hours at the cathedral entrance.",
+    "tags": [
+      "history",
+      "relic",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 34,
+    "city": "paris",
+    "region": "paris",
+    "category": "find",
+    "difficulty": "common",
+    "icon": "👑",
+    "title": "The Crown of Thorns",
+    "location": "Cathédrale Notre-Dame, Paris — Treasury",
+    "desc": "The Treasury of Notre-Dame holds what is claimed to be the Crown of Thorns, purchased by Louis IX from the Latin Emperor of Constantinople in 1239 for a sum greater than the cost of building the Sainte-Chapelle he built to house it. It has been here since the Revolution. The relic is a circlet of rushes — the thorns were distributed as gifts over centuries. It survived the 2019 fire in a fireproof safe.",
+    "context": "The Treasury is in the south transept. Entry costs a few euros on top of the cathedral ticket. The Crown is displayed in a reliquary designed in the 19th century. It is shown to the public on the first Friday of each month and on Good Friday.",
+    "proof": "Photo of the reliquary or the Treasury interior.",
+    "practical": "Treasury entry fee approx. €5. Crown displayed first Friday of the month and Good Friday.",
+    "tags": [
+      "history",
+      "relic"
+    ],
+    "seasonal": "Crown visible first Friday of each month"
+  },
+  {
+    "id": 35,
+    "city": "paris",
+    "region": "paris",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "😈",
+    "title": "Find the Stryge",
+    "location": "Cathédrale Notre-Dame, Paris — Gallery of Chimeras",
+    "desc": "The chimeras of Notre-Dame are not medieval. They were designed by Eugène Viollet-le-Duc during the 19th-century restoration and added between 1843 and 1864. The most famous is the Stryge — a winged demon resting his chin on his hands, staring out over Paris with an expression of absolute boredom. He appears in photographs so often that he has become more iconic than the cathedral itself.",
+    "context": "The Gallery of Chimeras is reached by climbing the north tower — 387 steps, no lift. Check reopening status after the 2019 fire restoration; tower access has been phased back in since the December 2024 reopening. The Stryge is on the west gallery, facing south.",
+    "proof": "Photo of yourself with the Stryge and Paris behind you.",
+    "practical": "Tower climb ticketed separately. Check notre-dame.fr for current access. Queues can be long — arrive early.",
+    "tags": [
+      "architecture",
+      "views",
+      "climb"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 36,
+    "city": "paris",
+    "region": "paris",
+    "category": "photograph",
+    "difficulty": "uncommon",
+    "icon": "🌹",
+    "title": "The North Rose at Noon",
+    "location": "Cathédrale Notre-Dame, Paris — north transept",
+    "desc": "The north rose window dates to around 1250 and is roughly 80% original medieval glass — a survival rate almost unmatched in any Gothic cathedral. It is 13 metres in diameter. At midday in winter, direct light passes through it and projects onto the floor of the north transept. The effect lasts about twenty minutes.",
+    "context": "Stand in the north transept and look up. For the floor projection, come between November and February around 12h–13h on a clear day. The window depicts Old Testament figures arranged around the Virgin — 80 panels in total.",
+    "proof": "Photo of the rose window, or the light projection on the floor if you time it right.",
+    "practical": "Free entry to the cathedral. No photography restrictions. Best light: winter midday.",
+    "tags": [
+      "art",
+      "architecture",
+      "light"
+    ],
+    "seasonal": "Floor projection: November–February, clear days around noon"
+  },
+  {
+    "id": 37,
+    "city": "paris",
+    "region": "paris",
+    "category": "listen",
+    "difficulty": "rare",
+    "icon": "🎶",
+    "title": "The Organ After the Fire",
+    "location": "Cathédrale Notre-Dame, Paris — west tribune",
+    "desc": "The Grand Orgue of Notre-Dame has 8,000 pipes, the oldest dating to the 17th century. It survived the 2019 fire — the stone vault held, and the instrument was protected by the dust and debris that buried it. After five years of cleaning, pipe-by-pipe, it was played again at the December 2024 reopening. Hearing it in the restored cathedral is something that will not be ordinary for long.",
+    "context": "Free organ recitals take place on Sundays at 16h. The sound from the west tribune fills the nave differently depending on where you sit — try the crossing and then the far end of the nave. The instrument has five manuals and 115 stops.",
+    "proof": "Audio recording or photo from the recital.",
+    "practical": "Free. Sunday recitals at 16h. Arrive at least 30 minutes early — the cathedral fills up.",
+    "tags": [
+      "music",
+      "history"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 38,
+    "city": "paris",
+    "region": "paris",
+    "category": "taste",
+    "difficulty": "common",
+    "icon": "🥐",
+    "title": "Breakfast on the Île",
+    "location": "Île de la Cité / Île Saint-Louis, Paris",
+    "desc": "The Île de la Cité is almost entirely occupied by institutions — the cathedral, the Palais de Justice, the Sainte-Chapelle, the Conciergerie. It has almost no residents. Cross the Pont Saint-Louis to the Île Saint-Louis, which does. Buy something from Berthillon or one of the boulangeries on Rue Saint-Louis en l'Île. Eat it on the quai with the apse of Notre-Dame visible across the water.",
+    "context": "The view of the apse from the left bank — Quai de la Tournelle or Quai de Montebello — is the angle that appears in most paintings. From the Île Saint-Louis you get a closer, quieter version of the same sight. Early morning before the tourist coaches arrive.",
+    "proof": "Photo of your breakfast with the cathedral apse in the background.",
+    "practical": "Berthillon open Wed–Sun. Boulangeries open from 7h. Best before 9h on weekdays.",
+    "tags": [
+      "neighbourhood",
+      "slow"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 39,
+    "city": "paris",
+    "region": "sainte-chapelle",
+    "category": "find",
+    "difficulty": "common",
+    "icon": "🪟",
+    "title": "The Upper Chapel: A Building Made of Glass",
+    "location": "Sainte-Chapelle, Île de la Cité, Paris",
+    "desc": "The upper chapel of Sainte-Chapelle has walls that are 75% stained glass. There is almost no stone visible between the windows. Abbot Suger had theorised that coloured light was a path to the divine — Louis IX built this chapel in 1248 to prove it architecturally. The 15 windows contain 1,113 scenes from the Old and New Testaments, read left to right, bottom to top.",
+    "context": "The lower chapel is functional but ordinary. Do not linger. The upper chapel is reached by a narrow staircase. The effect on entry is immediate. Go in the morning when the east windows are lit — they contain the Passion narrative and glow red and blue at once.",
+    "proof": "Photo of the upper chapel interior.",
+    "practical": "Entry fee required (combined ticket with Conciergerie available). Open daily. Arrive early — queues form quickly.",
+    "tags": [
+      "architecture",
+      "art",
+      "light"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 40,
+    "city": "paris",
+    "region": "sainte-chapelle",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "📖",
+    "title": "The Window of Relics",
+    "location": "Sainte-Chapelle, Paris — upper chapel, north side",
+    "desc": "One of the 15 windows depicts the acquisition of the relics — Louis IX buying the Crown of Thorns from Baudouin II, transporting it to Paris, carrying it barefoot on his shoulders. The chapel was built specifically to house these relics. The reliquary that held them cost three times as much as the building. Finding this window and reading its narrative sequence is reading the reason the building exists.",
+    "context": "The window is in the north bay, second from the west. Start at the bottom left panel and read upward, then move to the next column. Each scene is roughly the size of a sheet of paper. Binoculars help.",
+    "proof": "Photo of the relics window, or a detail panel.",
+    "practical": "Included in chapel entry. Binoculars worth bringing.",
+    "tags": [
+      "history",
+      "art",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 41,
+    "city": "paris",
+    "region": "sainte-chapelle",
+    "category": "listen",
+    "difficulty": "uncommon",
+    "icon": "🎻",
+    "title": "A Concert in the Upper Chapel",
+    "location": "Sainte-Chapelle, Paris",
+    "desc": "Sainte-Chapelle hosts chamber music concerts several evenings a week — mostly Vivaldi, Mozart, Bach. The acoustics of the upper chapel are exceptional: the stone is thin, the glass reflects, the reverberation is long but not muddy. The experience of sitting under those windows in the dark while music fills the space is different from any concert hall.",
+    "context": "Concerts are run by private operators, not the state. Tickets sell out. Check the programme at least a week in advance. Doors open 30 minutes before the concert — arriving late means a bad seat. Evening light through the west rose window during summer concerts is an unplanned bonus.",
+    "proof": "Ticket stub or photo of the chapel during the concert.",
+    "practical": "Tickets €25–45 approx. Check classiquesaintechapelle.com or concertssaintechapelle.com for programmes.",
+    "tags": [
+      "music",
+      "architecture"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 42,
+    "city": "paris",
+    "region": "saint-germain-des-pres",
+    "category": "find",
+    "difficulty": "common",
+    "icon": "🏛️",
+    "title": "The Oldest Church in Paris",
+    "location": "Église Saint-Germain-des-Prés, Paris 6e",
+    "desc": "Saint-Germain-des-Prés was founded in the 6th century by King Childebert I to house a relic from the Holy Land. The tower dates to the 11th century, the nave to the 12th. It is the oldest standing church in Paris by several centuries. Notre-Dame, begun in 1163, is a relative newcomer. The abbey that surrounded it was one of the most powerful in France until the Revolution, when it was largely demolished.",
+    "context": "The church sits on the Left Bank square of the same name. The Romanesque tower is unmistakeable from outside. Inside, focus on the choir — the oldest surviving part. The painted decoration you see on the walls is 19th-century (Hippolyte Flandrin), but it follows the outlines of medieval originals documented before they faded.",
+    "proof": "Photo of the Romanesque tower from the square, or the choir interior.",
+    "practical": "Free entry. Open daily. The square outside is excellent for coffee.",
+    "tags": [
+      "architecture",
+      "history"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 43,
+    "city": "paris",
+    "region": "saint-germain-des-pres",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "💀",
+    "title": "Find Descartes",
+    "location": "Église Saint-Germain-des-Prés, Paris — north side chapel",
+    "desc": "René Descartes is buried here — or most of him is. He died in Stockholm in 1650; his body was returned to France in 1666. During the Revolution his remains were moved and partially scattered. What is confirmed to be here is a femur and some fragments, interred in a sarcophagus in the Chapel of Saint-Benoît. The skull ended up in a Swedish museum after passing through a Swedish soldier's collection. Cogito ergo sum: he thought, therefore his bones are distributed across two countries.",
+    "context": "The chapel is on the north side of the nave, second from the east. The sarcophagus is modest. There is usually no queue.",
+    "proof": "Photo of the Descartes sarcophagus.",
+    "practical": "Free. No restrictions.",
+    "tags": [
+      "history",
+      "hidden"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 44,
+    "city": "paris",
+    "region": "saint-germain-des-pres",
+    "category": "taste",
+    "difficulty": "common",
+    "icon": "🫖",
+    "title": "Coffee on the Square",
+    "location": "Place Saint-Germain-des-Prés, Paris 6e",
+    "desc": "The Café de Flore and Les Deux Magots face the church across the square. Both have served writers, philosophers, and painters for over a century — Sartre and de Beauvoir worked at Flore most mornings in the 1940s because it was heated. Both are now expensive and self-conscious about their history. Order a café crème, pay the tourist premium without complaint, and sit long enough to understand why the location mattered.",
+    "context": "The church is best seen from the terrace. Early morning in winter, when the square is quiet and the Romanesque tower is lit sideways by low sun, is the right time. The coffee is not the point.",
+    "proof": "Photo from the terrace with the church visible.",
+    "practical": "Café crème approx. €8–10 on the terrace. Worth it once.",
+    "tags": [
+      "neighbourhood",
+      "slow"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 45,
+    "city": "paris",
+    "region": "saint-denis",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "⚰️",
+    "title": "The Necropolis of French Kings",
+    "location": "Basilique Saint-Denis, Saint-Denis",
+    "desc": "The Basilica of Saint-Denis contains the tombs of 43 kings, 32 queens, and 63 princes and princesses of France — the burial site of the French monarchy from Dagobert I in the 7th century to Louis XVIII in 1824. The royal tombs are among the finest medieval sculpture in Europe. Lying effigies of Clovis, François I, Henri II and Catherine de Médicis, Louis XII — an unbroken sequence of royal death spanning twelve centuries.",
+    "context": "The tombs are spread through the transepts, nave, and ambulatory. Pick up a floor plan at the entrance. The effigies of François I and Claude de France (by Philibert de l'Orme, 1550s) are the sculptural highlight. Do not miss the tomb of Louis XII and Anne of Brittany in the north transept.",
+    "proof": "Photo of one of the royal effigies.",
+    "practical": "Entry fee. Open daily. Allow 90 minutes minimum. RER D from Gare du Nord: 10 minutes.",
+    "tags": [
+      "history",
+      "art",
+      "architecture"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 46,
+    "city": "paris",
+    "region": "saint-denis",
+    "category": "find",
+    "difficulty": "rare",
+    "icon": "💡",
+    "title": "Where Gothic Was Invented",
+    "location": "Basilique Saint-Denis, Saint-Denis — choir and ambulatory",
+    "desc": "The choir and ambulatory of Saint-Denis, rebuilt by Abbot Suger between 1140 and 1144, are the origin point of Gothic architecture. Suger eliminated the thick Romanesque walls and replaced them with pointed arches, flying buttresses, and large windows filled with coloured glass. The resulting flood of light was deliberate theology. Every Gothic cathedral in Europe descends from what Suger built here.",
+    "context": "Stand in the ambulatory and look up at the double ambulatory with its radiating chapels. The proportions feel modern — almost skeletal. This was built when Romanesque was the norm. Suger wrote two accounts of the construction that survive; he was obsessive about light as divine metaphor. Chartres, Amiens, Reims, Notre-Dame — all of them start here.",
+    "proof": "Photo of the ambulatory looking toward the choir.",
+    "practical": "Included in basilica entry.",
+    "tags": [
+      "architecture",
+      "history"
+    ],
+    "seasonal": null
+  },
+  {
+    "id": 47,
+    "city": "paris",
+    "region": "saint-denis",
+    "category": "find",
+    "difficulty": "uncommon",
+    "icon": "🩸",
+    "title": "Louis XVI and Marie-Antoinette",
+    "location": "Basilique Saint-Denis, Saint-Denis — crypt",
+    "desc": "Louis XVI and Marie-Antoinette were guillotined in 1793 and buried in a common grave in what is now the Madeleine cemetery. In 1815 their remains were exhumed by Louis XVIII and reinterred in the Saint-Denis crypt in a ceremony of restoration. Their tomb in the crypt is plain marble — no effigies, no ornamentation. Above in the nave, the effigies of earlier kings lie in full regalia. The contrast is readable.",
+    "context": "The crypt is accessed from the south transept. It holds the bones of most French monarchs from the Capetians onward — exhumed during the Revolution and reburied in collective ossuary pits in the crypt, then partially reordered under the Restoration. The crypt is cool, quiet, and usually uncrowded.",
+    "proof": "Photo of the Louis XVI and Marie-Antoinette tomb.",
+    "practical": "Crypt included in basilica entry. Mind your head on the low vaulting.",
+    "tags": [
+      "history",
+      "hidden"
+    ],
+    "seasonal": null
   }
 ]
