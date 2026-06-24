@@ -715,10 +715,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 function addMapMarkers() {
-  const cityData = {};
+  const regionData = {};
   quests.forEach(q => {
-    if (!cityData[q.city]) cityData[q.city] = 0;
-    cityData[q.city]++;
+    const key = q.region || q.city;
+    if (!regionData[key]) regionData[key] = 0;
+    regionData[key]++;
   });
 
   const coords = {
@@ -727,20 +728,24 @@ function addMapMarkers() {
     rouen: { name: "Rouen", lat: 49.4401, lng: 1.0939 },
     beauvais: { name: "Beauvais", lat: 49.4313, lng: 2.0818 },
     chartres: { name: "Chartres", lat: 48.4474, lng: 1.4877 },
-    paris: { name: "Paris", lat: 48.8530, lng: 2.3499 }
+    paris: { name: "Notre-Dame de Paris", lat: 48.8530, lng: 2.3499 },
+    'sainte-chapelle': { name: "Sainte-Chapelle", lat: 48.8554, lng: 2.3451 },
+    'saint-germain-des-pres': { name: "Saint-Germain-des-Prés", lat: 48.8539, lng: 2.3335 },
+    'saint-denis': { name: "Basilique Saint-Denis", lat: 48.9362, lng: 2.3574 }
   };
 
   Object.keys(coords).forEach(key => {
-    const city = coords[key];
-    const count = cityData[key] || 0;
+    const loc = coords[key];
+    const count = regionData[key] || 0;
+    if (count === 0) return;
     const icon = L.divIcon({
       className: 'city-marker',
       iconSize: [14, 14]
     });
 
-    L.marker([city.lat, city.lng], { icon })
+    L.marker([loc.lat, loc.lng], { icon })
       .addTo(map)
-      .bindPopup(`<strong>${city.name}</strong><span class="popup-count">${count} quests</span>`);
+      .bindPopup(`<strong>${loc.name}</strong><span class="popup-count">${count} quests</span>`);
   });
 }
 
