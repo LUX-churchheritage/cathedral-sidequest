@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour de France 2026 — An Architecture Documentary</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap');
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-hover: #1a1a1a;
+    --border: #222;
+    --text: #e8e8e8;
+    --text-muted: #888;
+    --accent: #f4b324;
+    --accent-dim: #b8872a;
+    --romanesque: #b8872a;
+    --gothic: #f4b324;
+    --transitional: #9b59b6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 1000;
+  }
+
+  .logo {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo span { color: var(--accent); font-weight: 400; }
+
+  .header-right { display: flex; align-items: center; gap: 16px; }
+
+  .header-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  .header-link:hover { color: var(--text); }
+
+  .hero {
+    padding: 60px 24px 32px;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero .kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 560px;
+    flex-wrap: wrap;
+  }
+
+  .stat { text-align: center; }
+
+  .stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .map-section {
+    padding: 0 24px 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  #map {
+    height: 480px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    z-index: 1;
+  }
+
+  .leaflet-tile-pane { filter: saturate(0.15) brightness(0.55) contrast(1.15); }
+  .leaflet-container { background: var(--bg); }
+
+  .leaflet-popup-content-wrapper {
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .leaflet-popup-tip { background: var(--surface); }
+  .leaflet-popup-content { margin: 14px 16px; font-family: 'Inter', sans-serif; }
+  .leaflet-popup-close-button { color: var(--text-muted) !important; }
+
+  .popup-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .popup-city { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+  .popup-badges { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+  .popup-badge {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+  .popup-blurb { font-size: 13px; color: var(--text); line-height: 1.6; max-width: 260px; }
+  .popup-tag { font-size: 12px; color: var(--accent); margin-top: 8px; font-style: italic; }
+
+  .stage-marker-start, .stage-marker-finish {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--text-muted); opacity: 0.7;
+  }
+
+  .highlight-marker {
+    width: 16px; height: 16px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.15);
+  }
+
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 4px 24px 20px;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  .filters {
+    padding: 8px 24px 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-right: 4px;
+  }
+
+  .filter-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .filter-btn:hover { border-color: var(--accent-dim); color: var(--text); }
+
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+    font-weight: 500;
+  }
+
+  .filter-separator { width: 1px; height: 20px; background: var(--border); margin: 0 8px; }
+
+  .timeline-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4px 24px 20px;
+  }
+
+  .timeline {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+  }
+
+  .timeline::-webkit-scrollbar { height: 6px; }
+  .timeline::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+  .stage-chip {
+    flex-shrink: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 128px;
+  }
+
+  .stage-chip:hover { border-color: var(--accent-dim); }
+
+  .stage-chip.active {
+    border-color: var(--accent);
+    background: var(--surface-hover);
+  }
+
+  .stage-chip.has-highlight::after {
+    content: '';
+  }
+
+  .stage-chip-num {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-dim);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .stage-chip-num .dot {
+    width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+  }
+
+  .stage-chip-route {
+    font-size: 12px;
+    color: var(--text);
+    margin-top: 2px;
+    white-space: nowrap;
+  }
+
+  .stage-chip-date {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .highlights {
+    padding: 8px 24px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .highlight-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+
+  .highlight-card:hover {
+    border-color: var(--accent-dim);
+    transform: translateY(-1px);
+  }
+
+  .highlight-card-meta {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .style-badge {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 9px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+  }
+  .style-badge.romanesque { color: var(--romanesque); border-color: var(--romanesque); }
+  .style-badge.gothic { color: var(--gothic); border-color: var(--gothic); }
+  .style-badge.transitional { color: var(--transitional); border-color: var(--transitional); }
+
+  .stage-badge {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+
+  .score {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 1px;
+  }
+
+  .highlight-card-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .highlight-card-city { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+
+  .highlight-card-blurb {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.65;
+  }
+
+  .highlight-card-tag {
+    font-size: 12px;
+    color: var(--accent);
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  footer {
+    padding: 32px 24px 48px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+  }
+
+  .footer-text { font-size: 12px; color: var(--text-muted); }
+  .footer-text a { color: var(--accent-dim); text-decoration: none; }
+  .footer-text a:hover { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    header { flex-wrap: wrap; gap: 8px 16px; }
+    .header-right { gap: 12px; flex-wrap: wrap; }
+    .hero { padding: 40px 20px 24px; }
+    .hero h1 { font-size: 24px; }
+    #map { height: 380px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Cathedral <span>Sidequest</span></a>
+  <div class="header-right">
+    <a href="index.html" class="header-link">City sidequests</a>
+    <a href="https://churchheritage.eu" class="header-link" target="_blank">churchheritage.eu</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="kicker">4 – 26 July 2026 · Barcelona → Paris</div>
+  <h1>The Tour de France 2026 is also an architecture documentary</h1>
+  <p>The helicopter does not care who is winning. While the peloton grinds through another stage, the camera drifts to a bell tower, a cloister, a river bend. Twelve buildings along this year's route are worth planning your viewing around.</p>
+</section>
+
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-number">21</div>
+    <div class="stat-label">Stages</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">12</div>
+    <div class="stat-label">Highlights</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">3,331</div>
+    <div class="stat-label">Km of route</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">2</div>
+    <div class="stat-label">Countries</div>
+  </div>
+</div>
+
+<section class="map-section">
+  <div id="map"></div>
+</section>
+
+<div class="legend">
+  <div class="legend-item"><span class="legend-dot" style="background:var(--romanesque)"></span>Romanesque</div>
+  <div class="legend-item"><span class="legend-dot" style="background:var(--gothic)"></span>Gothic</div>
+  <div class="legend-item"><span class="legend-dot" style="background:var(--transitional)"></span>Transitional</div>
+</div>
+
+<div class="filters">
+  <span class="filter-label">Style</span>
+  <button class="filter-btn active" data-style="all">All</button>
+  <button class="filter-btn" data-style="romanesque">Romanesque</button>
+  <button class="filter-btn" data-style="gothic">Gothic</button>
+  <button class="filter-btn" data-style="transitional">Transitional</button>
+  <div class="filter-separator"></div>
+  <span class="filter-label">Rating</span>
+  <button class="filter-btn" data-score="5">Top monuments only</button>
+</div>
+
+<div class="timeline-wrap">
+  <div class="timeline" id="timeline"></div>
+</div>
+
+<div class="highlights" id="highlights"></div>
+
+<footer>
+  <p class="footer-text">Route data via <a href="https://www.cyclingstage.com" target="_blank">cyclingstage.com</a>. Church research: <a href="https://churchheritage.eu" target="_blank">LUX / churchheritage.eu</a>. Route subject to official confirmation.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+let stages = [];
+let highlights = [];
+let stageLines = {};
+let highlightMarkers = [];
+let activeStage = null;
+let activeStyle = 'all';
+let topOnly = false;
+
+const map = L.map('map', {
+  zoomControl: false,
+  attributionControl: false
+}).setView([46.5, 3.0], 6);
+
+L.control.zoom({ position: 'topright' }).addTo(map);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 18
+}).addTo(map);
+
+const styleColor = { romanesque: '#b8872a', gothic: '#f4b324', transitional: '#9b59b6' };
+
+Promise.all([
+  fetch('tour-stages.json').then(r => r.json()),
+  fetch('tour-highlights.json').then(r => r.json())
+]).then(([stageData, highlightData]) => {
+  stages = stageData;
+  highlights = highlightData;
+  drawStages();
+  drawHighlights();
+  renderTimeline();
+  renderHighlightCards();
+});
+
+function drawStages() {
+  stages.forEach(s => {
+    const line = L.polyline(s.coords, {
+      color: '#f4b324',
+      weight: 2.5,
+      opacity: 0.4
+    }).addTo(map);
+
+    line.bindTooltip(`Stage ${s.n} · ${s.start} → ${s.finish}`, { sticky: true });
+    line.on('click', () => selectStage(s.n));
+    line.on('mouseover', () => line.setStyle({ opacity: 0.9, weight: 3.5 }));
+    line.on('mouseout', () => {
+      if (activeStage !== s.n) line.setStyle({ opacity: 0.4, weight: 2.5 });
+    });
+
+    stageLines[s.n] = line;
+  });
+}
+
+function drawHighlights() {
+  highlights.forEach(h => {
+    const color = styleColor[h.style];
+    const icon = L.divIcon({
+      className: '',
+      html: `<div class="highlight-marker" style="background:${color}"></div>`,
+      iconSize: [16, 16],
+      iconAnchor: [8, 14]
+    });
+
+    const marker = L.marker([h.lat, h.lng], { icon }).addTo(map);
+    const stars = '★'.repeat(h.score) + '☆'.repeat(5 - h.score);
+
+    marker.bindPopup(`
+      <div class="popup-title">${h.name}</div>
+      <div class="popup-city">${h.city} · Stage ${h.stage} · ${formatDate(h.date)}</div>
+      <div class="popup-badges">
+        <span class="popup-badge" style="color:${color};border-color:${color}">${h.styleLabel}</span>
+        <span class="popup-badge">${stars}</span>
+      </div>
+      <div class="popup-blurb">${h.blurb}</div>
+      <div class="popup-tag">${h.tag}</div>
+    `);
+
+    marker._data = h;
+    highlightMarkers.push(marker);
+  });
+}
+
+function formatDate(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
+}
+
+function renderTimeline() {
+  const el = document.getElementById('timeline');
+  el.innerHTML = stages.map(s => {
+    const hasHighlight = highlights.some(h => h.stage === s.n);
+    return `
+      <div class="stage-chip ${hasHighlight ? 'has-highlight' : ''}" data-stage="${s.n}" onclick="selectStage(${s.n})">
+        <div class="stage-chip-num">Stage ${s.n}${hasHighlight ? '<span class="dot"></span>' : ''}</div>
+        <div class="stage-chip-route">${s.start} → ${s.finish}</div>
+        <div class="stage-chip-date">${formatDate(s.date)} · ${s.km} km</div>
+      </div>
+    `;
+  }).join('');
+}
+
+function selectStage(n) {
+  activeStage = activeStage === n ? null : n;
+
+  Object.keys(stageLines).forEach(k => {
+    const isActive = activeStage === Number(k);
+    stageLines[k].setStyle({
+      opacity: activeStage === null ? 0.4 : (isActive ? 0.95 : 0.15),
+      weight: isActive ? 4 : 2.5
+    });
+    if (isActive) stageLines[k].bringToFront();
+  });
+
+  document.querySelectorAll('.stage-chip').forEach(chip => {
+    chip.classList.toggle('active', Number(chip.dataset.stage) === activeStage);
+  });
+
+  if (activeStage !== null) {
+    map.flyToBounds(stageLines[activeStage].getBounds(), { padding: [40, 40], duration: 0.6 });
+  } else {
+    map.flyTo([46.5, 3.0], 6, { duration: 0.6 });
+  }
+
+  applyFilters();
+}
+
+function setStyleFilter(style) {
+  activeStyle = style;
+  document.querySelectorAll('.filter-btn[data-style]').forEach(b => {
+    b.classList.toggle('active', b.dataset.style === style);
+  });
+  applyFilters();
+}
+
+document.querySelectorAll('.filter-btn[data-style]').forEach(btn => {
+  btn.addEventListener('click', () => setStyleFilter(btn.dataset.style));
+});
+
+document.querySelector('.filter-btn[data-score]').addEventListener('click', function() {
+  topOnly = !topOnly;
+  this.classList.toggle('active', topOnly);
+  applyFilters();
+});
+
+function visibleHighlights() {
+  return highlights.filter(h => {
+    if (activeStyle !== 'all' && h.style !== activeStyle) return false;
+    if (topOnly && h.score < 5) return false;
+    if (activeStage !== null && h.stage !== activeStage) return false;
+    return true;
+  });
+}
+
+function applyFilters() {
+  const visible = new Set(visibleHighlights().map(h => h.id));
+  highlightMarkers.forEach(m => {
+    const show = visible.has(m._data.id);
+    const el = m.getElement();
+    if (el) el.style.display = show ? '' : 'none';
+  });
+  renderHighlightCards();
+}
+
+function renderHighlightCards() {
+  const container = document.getElementById('highlights');
+  const visible = visibleHighlights();
+
+  if (visible.length === 0) {
+    container.innerHTML = `<p style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:24px;">No highlights on this stage or filter. Try clearing the filters.</p>`;
+    return;
+  }
+
+  container.innerHTML = visible.map(h => {
+    const stars = '★'.repeat(h.score) + '☆'.repeat(5 - h.score);
+    return `
+      <div class="highlight-card" onclick="focusHighlight(${h.id})">
+        <div class="highlight-card-meta">
+          <span class="style-badge ${h.style}">${h.styleLabel}</span>
+          <span class="stage-badge">Stage ${h.stage}</span>
+          <span class="score">${stars}</span>
+        </div>
+        <div class="highlight-card-title">${h.name}</div>
+        <div class="highlight-card-city">${h.city} · ${formatDate(h.date)}</div>
+        <div class="highlight-card-blurb">${h.blurb}</div>
+        <div class="highlight-card-tag">${h.tag}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+function focusHighlight(id) {
+  const marker = highlightMarkers.find(m => m._data.id === id);
+  if (!marker) return;
+  map.flyTo(marker.getLatLng(), 13, { duration: 0.6 });
+  setTimeout(() => marker.openPopup(), 650);
+}
+</script>
+</body>
+</html>
